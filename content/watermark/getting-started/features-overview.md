@@ -8,10 +8,6 @@ description: ""
 keywords: ""
 ---
 
-
-
-
-
 # Overview #
 
 GroupDocs.Watermark Cloud is a REST API for managing watermarks in the documents of different file formats.
@@ -50,7 +46,11 @@ Groupdocs.Watermark Cloud allows to remove watermarks from document. You may wan
 
 # Security and Authentication #
 
-The GroupDocs.Watermark Cloud API is secured and requires authentication. Two keys AppSID and AppKey are required for Authentication which can be created at the [Dashboard](http://dashboard.groupdocs.cloud/). Check [Authenticating API Requests](https://docs.groupdocs.cloud/display/gdtotalcloud/Authenticating+API+Requests) article for complete example.
+The GroupDocs.Watermark Cloud API is secured and requires authentication. 
+
+Developers can [generate]({{< ref "total/getting-started/ui-topics/creating-and-managing-application.md" >}}) a new application with an unique Client Id and Client Secret combination after [registering]({{< ref "total/getting-started/ui-topics/creating-and-managing-account.md" >}}) to our [dashboard](https://dashboard.groupdocs.cloud). Authenticated requests require a Bearer authorization header with a JWT Token obtained by using the previously specified Cliend Id + Client Secret credentials.
+
+You can check complete details about authenticating your calls to our API [here]({{< ref "total/getting-started/overview-rest-api/authenticating-api-requests.md" >}}).
 
 # SDKs #
 
@@ -63,6 +63,8 @@ At the moment following SDKs are provided:
 
 # API Explorer #
 
-The easiest way to try out our API right away in your browser! With the [GroupDocs Cloud API explorer](https://apireference.groupdocs.cloud/watermark/). This is a collection of Swagger documentation for the GroupDocs Cloud APIs. You can get information about all the resources in the API. It also provides testing and interactivity to our API endpoint documentation.
+The easiest way to try out our API right away in your browser! With the [GroupDocs Cloud API explorer](https://apireference.groupdocs.cloud/watermark/). This is a collection of Swagger documentation for the GroupDocs Cloud APIs. 
+
+You can get information about all the resources in the API. It also provides testing and interactivity to our API endpoint documentation.
 
  
