@@ -11,7 +11,7 @@ keywords: ""
 
 
 
-# Introduction #
+## Introduction ##
 
 This REST API allows replacing watermarks in the document.
 
@@ -21,95 +21,100 @@ The API supports a rich set of search criteria that allows finding images and te
 
 With this operation, you may replace found watermark properties: watermark image, text or/and text appearance options like font, size, color, etc.
 
-
 The table below contains the full list of properties.
 
-|#Name|#Description|#Comment
+|Name|Description|Comment
+|---|---|---
 |FileInfo.FilePath|The path of the document, located in the storage|Required
 |FileInfo.StorageName|Storage name|Could be omitted for default storage
 |FileInfo.Password|Password to open file|Should be specified only for password-protected documents
 |OutputFolder|The folder for the resultant file|"watermark/replaced_watermark" is default
-|TextSearchCriteria|Search criteria allowing filtering by watermark text| 
-|TextSearchCriteria.SearchText|The exact string to search for| 
-|ImageSearchCriteria|Search criteria for finding images| 
-|ImageSearchCriteria.ImageFileInfo|Image to search for.| 
+|TextSearchCriteria|Search criteria allowing filtering by watermark text|
+|TextSearchCriteria.SearchText|The exact string to search for|
+|ImageSearchCriteria|Search criteria for finding images|
+|ImageSearchCriteria.ImageFileInfo|Image to search for.|
 |ImageFileInfo.FilePath|The path of the image, located in the storage|Required
-|ImageFileInfo.StorageName|Storage name| 
-|ImageFileInfo.Password|The password to open image| 
-|SizeSearchCriteria|Search criteria allowing filtering by watermark size| 
+|ImageFileInfo.StorageName|Storage name|
+|ImageFileInfo.Password|The password to open image|
+|SizeSearchCriteria|Search criteria allowing filtering by watermark size|
 |SizeSearchCriteria.Dimension|The dimension of a watermark to search by|Possible values: Height, Width
-|SizeSearchCriteria.Maximum|Dimension ending value| 
-|SizeSearchCriteria.Minimum|Dimension starting value| 
-|RotateAngleSearchCriteria|Search criteria allowing filtering by watermark rotate angle| 
-|RotateAngleSearchCriteria.MaximumAngle|Ending angle in degrees| 
-|RotateAngleSearchCriteria.MinimumAngle|Starting angle in degrees| 
-|TextFormattingSearchCriteria|Search criteria allowing filtering by text formatting| 
-|TextFormattingSearchCriteria.ForegroundColorRange|The range of colors which are used to filter watermarks by text foreground color| 
-|TextFormattingSearchCriteria.BackgroundColorRange|The range of colors which are used to filter watermarks by the text background color.| 
-|TextFormattingSearchCriteria.FontName|Name of the font which is used in possible watermark text formatting.| 
-|TextFormattingSearchCriteria.MinFontSize|Starting value of the font size.| 
-|TextFormattingSearchCriteria.MaxFontSize|Ending value of the font size.| 
-|TextFormattingSearchCriteria.FontBold|Indicating whether the font used in watermark text formatting is bold.| 
-|TextFormattingSearchCriteria.FontUnderline|Indicating whether the font used in watermark text formatting is underline.| 
-|TextFormattingSearchCriteria.FontStrikeout|Indicating whether the font used in watermark text formatting is a strikeout.| 
-|TextFormattingSearchCriteria.FontItalic|Indicating whether the font used in watermark text formatting is italic.| 
-|ReplaceTextOptions|Parameters of text to replace found text watermarks details| 
+|SizeSearchCriteria.Maximum|Dimension ending value|
+|SizeSearchCriteria.Minimum|Dimension starting value|
+|RotateAngleSearchCriteria|Search criteria allowing filtering by watermark rotate angle|
+|RotateAngleSearchCriteria.MaximumAngle|Ending angle in degrees|
+|RotateAngleSearchCriteria.MinimumAngle|Starting angle in degrees|
+|TextFormattingSearchCriteria|Search criteria allowing filtering by text formatting|
+|TextFormattingSearchCriteria.ForegroundColorRange|The range of colors which are used to filter watermarks by text foreground color|
+|TextFormattingSearchCriteria.BackgroundColorRange|The range of colors which are used to filter watermarks by the text background color.|
+|TextFormattingSearchCriteria.FontName|Name of the font which is used in possible watermark text formatting.|
+|TextFormattingSearchCriteria.MinFontSize|Starting value of the font size.|
+|TextFormattingSearchCriteria.MaxFontSize|Ending value of the font size.|
+|TextFormattingSearchCriteria.FontBold|Indicating whether the font used in watermark text formatting is bold.|
+|TextFormattingSearchCriteria.FontUnderline|Indicating whether the font used in watermark text formatting is underline.|
+|TextFormattingSearchCriteria.FontStrikeout|Indicating whether the font used in watermark text formatting is a strikeout.|
+|TextFormattingSearchCriteria.FontItalic|Indicating whether the font used in watermark text formatting is italic.|
+|ReplaceTextOptions|Parameters of text to replace found text watermarks details|
 |ReplaceTextOptions.Text|New text for the watermark|Required for text replacement
 |ReplaceTextOptions.FontFamily|Font name for a text|Left the same if not specified
 |ReplaceTextOptions.Size|Font size for new text|Left the same if not specified
-|ReplaceTextOptions.Style|Style of a new text| 
-|ReplaceTextOptions.ForegroundColor|Foreground color for a new text| 
-|ReplaceTextOptions.BackgroundColor|Background color for a new text| 
-|ReplaceImageOptions|Parameters of the image to replace found image watermarks details| 
-|ReplaceImageOptions.Image|New image for watermark| 
+|ReplaceTextOptions.Style|Style of a new text|
+|ReplaceTextOptions.ForegroundColor|Foreground color for a new text|
+|ReplaceTextOptions.BackgroundColor|Background color for a new text|
+|ReplaceImageOptions|Parameters of the image to replace found image watermarks details|
+|ReplaceImageOptions.Image|New image for watermark|
 |Image.FilePath|The path of the image, located in the storage|Required
-|Image.StorageName|Storage name| 
-|Image.Password|The password to open image| 
+|Image.StorageName|Storage name|
+|Image.Password|The password to open image|
 
-## ColorRange ##
+### ColorRange ###
 
-|#Name|#Description|#Comment
-|Color|The exact color from which the range is created| 
-|IsEmpty|Indicates whether only the empty color is in range| 
-|MaxBrightness|The ending brightness value.| 
-|MaxHue|The ending hue value, in degrees.| 
-|MaxSaturation|The ending saturation value.| 
-|MinBrightness|The starting brightness value.| 
-|MinHue|The starting hue value, in degrees.| 
-|MinSaturation|The starting saturation value.| 
+|Name|Description|Comment
+|---|---|---
+|Color|The exact color from which the range is created|
+|IsEmpty|Indicates whether only the empty color is in range|
+|MaxBrightness|The ending brightness value.|
+|MaxHue|The ending hue value, in degrees.|
+|MaxSaturation|The ending saturation value.|
+|MinBrightness|The starting brightness value.|
+|MinHue|The starting hue value, in degrees.|
+|MinSaturation|The starting saturation value.|
 
-### Color ###
+#### Color ####
 
-|#Name|#Description|#Comment
-|A|The alpha component value of the color| 
-|R|The red component value of the color| 
-|G|The green component value of the color| 
-|B|The blue component value of the color| 
-|ARGB|The 32-bit ARGB value| 
-|Name|A system-defined color name| 
-|IsEmpty|Indicates whether Color is uninitialized| 
+|Name|Description|Comment
+|---|---|---
+|A|The alpha component value of the color|
+|R|The red component value of the color|
+|G|The green component value of the color|
+|B|The blue component value of the color|
+|ARGB|The 32-bit ARGB value|
+|Name|A system-defined color name|
+|IsEmpty|Indicates whether Color is uninitialized|
 
-## Resource URI ##
+### Resource URI ###
 
-|HTTP POST ~~/watermark/replace
+```html
+HTTP POST ~~/watermark/replace
+```
 
 [Swagger UI](https://apireference.groupdocs.cloud/watermark/#/Watermark/Replace) lets you call this REST API directly from the browser. 
 
-## cURL Example ##
+### cURL Example ###
 
+{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}}
+{{< tab tabNum="1" >}}
 
- Request
-```html 
-
-* First get JSON Web Token
-* Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
+```bash
+# First get JSON Web Token
+# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
+# Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
 curl -v "https://api.groupdocs.cloud/connect/token" \
 -X POST \
 -d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
 -H "Content-Type: application/x-www-form-urlencoded" \
 -H "Accept: application/json"
    
-* cURL example to get document information
+# cURL example to get document information
 curl -v "https://api.groupdocs.cloud/v1.0/watermark/replace" \
 -X POST \
 -H "Content-Type: application/json" \
@@ -137,41 +142,32 @@ curl -v "https://api.groupdocs.cloud/v1.0/watermark/replace" \
         }
     }
 }"
+```
 
- ```
+{{< /tab >}}
+{{< tab tabNum="2" >}}
 
-
- Response
-
-```html 
-
+```json
 {
     "downloadUrl": "https://api.groupdocs.cloud/v1.0/watermark/storage/file/replaced_watermarks/sample_pdf/sample.pdf",
     "path": "replaced_watermarks/sample_pdf/sample.pdf"
 }
+```
 
- ```
+{{< /tab >}}
+{{< /tabs >}}
 
-
-
-
-## SDKs ##
+### SDKs ###
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-watermark-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-watermark-cloud), it Replaces the [Watermark](https://apireference.groupdocs.cloud/watermark/#/Watermark/Replace) API calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
-### SDK Examples ###
+#### SDK Examples ####
 
-
- C#
-
+{{< tabs tabTotal="2" tabID="2" tabName1="C#" tabName2="Java" >}}
+{{< tab tabNum="1" >}}
 {{< gist groupdocscloud 90da27f305908428852e34cf1ed77ad0 Watermark_CSharp_Replace_Watermark.cs >}}
-
-
-
-
- Java
-
+{{< /tab >}}
+{{< tab tabNum="2" >}}
 {{< gist groupdocscloud 499959a7260c4903f836012226cb2dac Watermark_Java_Replace_Watermark.java >}}
-
-
-
+{{< /tab >}}
+{{< /tabs >}}
