@@ -58,7 +58,13 @@ curl -v "https://api.groupdocs.cloud/v1.0/watermark" \
                 "ForegroundColor": {
                     "Name": "red"
                 },
-                "TextAlignment": "center"
+                "TextAlignment": "center",
+				"Padding": {
+				  "Left": 0,
+				  "Top": 0,
+				  "Right": 0,
+				  "Bottom": 0
+				}
             },
             "Position": {
                 "X": 0.0,
