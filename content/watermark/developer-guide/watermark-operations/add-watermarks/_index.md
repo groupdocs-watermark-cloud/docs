@@ -5,13 +5,8 @@ title: "Add Watermarks"
 productName: "GroupDocs.Watermark Cloud"
 description: ""
 keywords: ""
+toc: True
 ---
-
-
-
-
-
-## Introduction ##
 
 This REST API allows adding watermarks inside the documents.
 
@@ -42,7 +37,7 @@ The table below contains the full list of properties that can be specified when 
 |WatermarkDetails.SpreadsheetOptions|Specific options for Spreadsheet documents.|
 |WatermarkDetails.DiagramOptions|Specific options for Diagram documents.|
 
-### Watermark Details ###
+## Watermark Details
 
 |Name|Description|Comment
 |---|---|---
@@ -79,7 +74,7 @@ The table below contains the full list of properties that can be specified when 
 |Position.IsBackground|Indicates whether the watermark should be placed at the background.|
 |Opacity|The opacity of the watermark|
 
-### PdfOptions ###
+## PdfOptions
 
 |Name|Description|Comment
 |---|---|---
@@ -88,13 +83,13 @@ The table below contains the full list of properties that can be specified when 
 |RasterizeImageFormat|PDF image conversion format|Possible values: Jpeg, Png, Gif
 |Pages|Pages to add watermarks to|
 
-### ImageOptions ###
+## ImageOptions
 
 |Name|Description|Comment
 |---|---|---
 |Frames|Frames of the multi-frame image to add watermark|
 
-### PresentationOptions ###
+## PresentationOptions
 
 |Name|Description|Comment
 |---|---|---
@@ -102,7 +97,7 @@ The table below contains the full list of properties that can be specified when 
 |LockWatermarks|Indicates whether editing of the watermark in PowerPoint is forbidden.|
 |Slides|Slides to add watermarks to|
 
-### WordProcessingOptions ###
+## WordProcessingOptions
 
 |Name|Description|Comment
 |---|---|---
@@ -111,14 +106,14 @@ The table below contains the full list of properties that can be specified when 
 |LockWatermarks|Indicates whether editing of the shape in Word is forbidden.|If true, WatermarkLockType set to ReadOnly.
 |Pages|Pages to add watermarks to|It starts from 1.
 
-### SpreadsheetOptions ###
+## SpreadsheetOptions
 
 |Name|Description|Comment
 |---|---|---
 |LockWatermarks|Indicates whether editing of the shape in Excel is forbidden.|
 |Worksheets|Worksheets to add watermarks to|
 
-### DiagramOptions ###
+## DiagramOptions
 
 |Name|Description|Comment
 |---|---|---
@@ -126,12 +121,10 @@ The table below contains the full list of properties that can be specified when 
 |LockWatermarks|It indicates whether editing of the shape in Visio is forbidden.|
 |Worksheets|Worksheets to add watermarks to.|
 
-### Resource URI ###
+## Resource URI
 
 ```html
 HTTP POST ~~/watermark
 ```
 
 [Swagger UI](https://apireference.groupdocs.cloud/watermark/#/watermark) lets you call this REST API directly from the browser.  
-
-### Use Cases ###

@@ -6,22 +6,23 @@ productName: "GroupDocs.Watermark Cloud"
 weight: 3
 description: ""
 keywords: ""
+toc: True
 ---
 
-# Create an account #
+## Create an account
 
 Creating an account is very simple. Go to [https://dashboard.groupdocs.cloud](https://dashboard.groupdocs.cloud/) to create a free account. 
 
-# Create an API client app #
+## Create an API client app
 
 Before you can make any requests to GroupDocs Cloud API you need to get a **Client Id** and a **Client Secret**.
 This will will be used to invoke GroupDocs Cloud API. You can get it by creating a new [Application](https://dashboard.groupdocs.cloud/applications).
 
-# Install the SDK of your choice #
+## Install the SDK of your choice
 
 Using an SDK (API client) is the quickest way for a developer to speed up the development. An SDK takes care of a lot of low-level details of making requests and handling responses and lets you focus on writing code specific to your particular project. Please check  article to learn how to add an SDK to your project.
 
-# Make an API request from the SDK of your choice #
+## Make an API request from the SDK of your choice
 
 Use the **Client Id** and the **Client Secret** from the API app client you have created previously and replace in the corresponding code. Below is an example demonstrating how to get a list of all supported file formats in GroupDocs.Watermark Cloud.
 
@@ -48,4 +49,3 @@ var response = apiInstance.GetSupportedFileFormats();
 
 {{< /tab >}} 
 {{< /tabs >}}
-

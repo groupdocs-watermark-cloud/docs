@@ -6,9 +6,5 @@ productName: "GroupDocs.Watermark Cloud"
 weight: 2
 description: ""
 keywords: ""
+weight: 1
 ---
-
-### Getting Started ###
-
-
-

@@ -5,9 +5,6 @@ title: "Developer Guide"
 productName: "GroupDocs.Watermark Cloud"
 description: ""
 keywords: ""
+weight: 2
 ---
-
-### Developer Guide ###
-
-
 

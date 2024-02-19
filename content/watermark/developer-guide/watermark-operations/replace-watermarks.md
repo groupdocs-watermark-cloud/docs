@@ -7,12 +7,6 @@ description: ""
 keywords: ""
 ---
 
-
-
-
-
-## Introduction ##
-
 This REST API allows replacing watermarks in the document.
 
 The operation performs a search for possible watermarks and then performs replacement operations over them.
@@ -66,7 +60,7 @@ The table below contains the full list of properties.
 |Image.StorageName|Storage name|
 |Image.Password|The password to open image|
 
-### ColorRange ###
+## ColorRange
 
 |Name|Description|Comment
 |---|---|---
@@ -79,7 +73,7 @@ The table below contains the full list of properties.
 |MinHue|The starting hue value, in degrees.|
 |MinSaturation|The starting saturation value.|
 
-#### Color ####
+## Color
 
 |Name|Description|Comment
 |---|---|---
@@ -91,7 +85,7 @@ The table below contains the full list of properties.
 |Name|A system-defined color name|
 |IsEmpty|Indicates whether Color is uninitialized|
 
-### Resource URI ###
+## Resource URI
 
 ```html
 HTTP POST ~~/watermark/replace
@@ -99,10 +93,10 @@ HTTP POST ~~/watermark/replace
 
 [Swagger UI](https://apireference.groupdocs.cloud/watermark/#/Watermark/Replace) lets you call this REST API directly from the browser. 
 
-### cURL Example ###
+## cURL example
 
-{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example1">}}
+{{< tab "Request" >}}
 
 ```bash
 # First get JSON Web Token
@@ -145,7 +139,7 @@ curl -v "https://api.groupdocs.cloud/v1.0/watermark/replace" \
 ```
 
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Response" >}}
 
 ```json
 {
@@ -157,17 +151,15 @@ curl -v "https://api.groupdocs.cloud/v1.0/watermark/replace" \
 {{< /tab >}}
 {{< /tabs >}}
 
-### SDKs ###
+## SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-watermark-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-watermark-cloud), it Replaces the [Watermark](https://apireference.groupdocs.cloud/watermark/#/Watermark/Replace) API calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
-#### SDK Examples ####
-
-{{< tabs tabTotal="2" tabID="2" tabName1="C#" tabName2="Java" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 {{< gist groupdocscloud 90da27f305908428852e34cf1ed77ad0 Watermark_CSharp_Replace_Watermark.cs >}}
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Java" >}}
 {{< gist groupdocscloud 499959a7260c4903f836012226cb2dac Watermark_Java_Replace_Watermark.java >}}
 {{< /tab >}}
 {{< /tabs >}}

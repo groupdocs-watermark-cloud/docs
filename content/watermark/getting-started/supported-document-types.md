@@ -6,18 +6,12 @@ productName: "GroupDocs.Watermark Cloud"
 weight: 4
 description: ""
 keywords: ""
+toc: True
 ---
-
-
-
-
-
-
-## Supported Document Formats ##
 
 The following table indicates the input and output file formats supported by GroupDocs.Watermark Cloud
 
-### WordProcessing family formats ###
+## WordProcessing family formats
 
 |Format|Description|Add|Remove|Search|Replace
 |---|---|---|---|---|---
@@ -30,7 +24,7 @@ The following table indicates the input and output file formats supported by Gro
 |[ODT](https://wiki.fileformat.com/specification/word-processing/odt/)|Open Document Format Text Document|&#10004;|&#10004;|&#10004;|&#10004;
 |[RTF](https://wiki.fileformat.com/specification/word-processing/rtf/)|Rich Text Format|&#10004;|&#10004;|&#10004;|&#10004;
 
-### Spreadsheet family formats ###
+## Spreadsheet family formats
 
 |Format|Description|Add|Remove|Search|Replace
 |---|---|---|---|---|---
@@ -41,7 +35,7 @@ The following table indicates the input and output file formats supported by Gro
 |[XLTX](https://wiki.fileformat.com/specification/spreadsheet/xltx/)|Office Open XML Template Macro-Free|&#10004;|&#10004;|&#10004;|&#10004;
 |[XLTM](https://wiki.fileformat.com/specification/spreadsheet/xltm/)|Office Open XML Template Macro-Enabled|&#10004;|&#10004;|&#10004;|&#10004;
 
-### Presentation family formats ###
+## Presentation family formats
 
 |Format|Description|Add|Remove|Search|Replace
 |---|---|---|---|---|---
@@ -54,7 +48,7 @@ The following table indicates the input and output file formats supported by Gro
 |[POTX](https://wiki.fileformat.com/presentation/potx/)|Microsoft Office Open XML PresentationML Macro-Free Template|&#10004;|&#10004;|&#10004;|&#10004;
 |[POTM](https://wiki.fileformat.com/presentation/potm/)|Microsoft Office Open XML PresentationML Macro-Enabled Template|&#10004;|&#10004;|&#10004;|&#10004;
 
-### Other formats ###
+## Other formats
 
 |Format|Description|Add|Remove|Search|Replace
 |---|---|---|---|---|---

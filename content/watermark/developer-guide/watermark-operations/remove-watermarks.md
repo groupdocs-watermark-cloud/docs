@@ -5,13 +5,8 @@ title: "Remove Watermarks"
 productName: "GroupDocs.Watermark Cloud"
 description: ""
 keywords: ""
+toc: True
 ---
-
-
-
-
-
-## Introduction ##
 
 This REST API allows removing watermarks from the document.
 
@@ -69,7 +64,7 @@ The table below contains the full list of properties.
 
 In case the array is not passed, all the found possible watermarks are removed.
 
-### ColorRange ###
+## ColorRange
 
 |Name|Description|Comment
 |---|---|---
@@ -82,7 +77,7 @@ In case the array is not passed, all the found possible watermarks are removed.
 |MinHue|The starting hue value, in degrees.|
 |MinSaturation|The starting saturation value.|
 
-#### Color ####
+## Color
 
 |Name|Description|Comment
 |---|---|---
@@ -94,7 +89,7 @@ In case the array is not passed, all the found possible watermarks are removed.
 |Name|A system-defined color name|
 |IsEmpty|Indicates whether Color is uninitialized|
 
-### Resource URI ###
+## Resource URI
 
 ```html
 HTTP POST ~~/watermark/remove
@@ -102,10 +97,10 @@ HTTP POST ~~/watermark/remove
 
 [Swagger UI](https://apireference.groupdocs.cloud/watermark/#/Watermark/Remove) lets you call this REST API directly from the browser.
 
-### cURL Example ###
+## cURL example
 
-{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example1">}}
+{{< tab "Request" >}}
 
 ```bash
 # First get JSON Web Token
@@ -141,7 +136,7 @@ curl -v "https://api.groupdocs.cloud/v1.0/watermark/remove" \
 ```
 
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Response" >}}
 
 ```json
 {
@@ -153,17 +148,15 @@ curl -v "https://api.groupdocs.cloud/v1.0/watermark/remove" \
 {{< /tab >}}
 {{< /tabs >}}
 
-### SDKs ###
+## SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-watermark-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-watermark-cloud), it Removes the [Watermark](https://apireference.groupdocs.cloud/watermark/#/Watermark/Remove) API calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
-#### SDK Examples ####
-
-{{< tabs tabTotal="2" tabID="2" tabName1="C#" tabName2="Java" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 {{< gist groupdocscloud 90da27f305908428852e34cf1ed77ad0 Watermark_CSharp_Remove_Watermark.cs >}}
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Java" >}}
 {{< gist groupdocscloud 499959a7260c4903f836012226cb2dac Watermark_Java_Remove_Watermark.java >}}
 {{< /tab >}}
 {{< /tabs >}}
