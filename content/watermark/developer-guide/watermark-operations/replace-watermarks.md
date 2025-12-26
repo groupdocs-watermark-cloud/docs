@@ -96,27 +96,26 @@ HTTP POST ~~/watermark/replace
 ## cURL example
 
 {{< tabs "example1">}}
-{{< tab "Request" >}}
+{{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-# First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
-# Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
+# Get JSON Web Token
+# Provide your Client Id and Client Secret via environment variables CLIENT_ID and CLIENT_SECRET.
 curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
-   
-# cURL example to get document information
+  -X POST \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json"
+
+# cURL example to replace watermark in a document
 curl -v "https://api.groupdocs.cloud/v1.0/watermark/replace" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>"
--d "{
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
     "FileInfo": {
-        "FilePath": "with_watermarks\\sample.pdf",
+        "FilePath": "with_watermarks/sample.pdf"
     },
     "ReplaceTextOptions": {
         "Text": "New watermark text",
@@ -124,7 +123,7 @@ curl -v "https://api.groupdocs.cloud/v1.0/watermark/replace" \
     },
     "ReplaceImageOptions": {
         "Image": {
-            "FilePath": "images\\sample.jpg"
+            "FilePath": "images/sample.jpg"
         }
     },
     "TextSearchCriteria": {
@@ -132,10 +131,75 @@ curl -v "https://api.groupdocs.cloud/v1.0/watermark/replace" \
     },
     "ImageSearchCriteria": {
         "ImageFileInfo": {
-            "FilePath": "watermark_images\\sample_watermark.png"
+            "FilePath": "watermark_images/sample_watermark.png"
+        }
+    }
+}'
+```
+
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+# Get JSON Web Token
+# Provide your Client Id and Client Secret via environment variables CLIENT_ID and CLIENT_SECRET.
+curl.exe -v "https://api.groupdocs.cloud/connect/token" `
+  -X POST `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json"
+
+# cURL example to replace watermark in a document
+curl.exe -v "https://api.groupdocs.cloud/v1.0/watermark/replace" `
+  -X POST `
+  -H "Content-Type: application/json" `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -d "{
+    'FileInfo': {
+        'FilePath': 'with_watermarks/sample.pdf'
+    },
+    'ReplaceTextOptions': {
+        'Text': 'New watermark text',
+        'Size': 0.0
+    },
+    'ReplaceImageOptions': {
+        'Image': {
+            'FilePath': 'images/sample.jpg'
+        }
+    },
+    'TextSearchCriteria': {
+        'SearchText': 'Watermark text'
+    },
+    'ImageSearchCriteria': {
+        'ImageFileInfo': {
+            'FilePath': 'watermark_images/sample_watermark.png'
         }
     }
 }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+:: Get JSON Web Token
+:: Provide your Client Id and Client Secret via environment variables CLIENT_ID and CLIENT_SECRET.
+curl -v "https://api.groupdocs.cloud/connect/token" ^
+  -X POST ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
+
+:: cURL example to replace watermark in a document
+curl -v "https://api.groupdocs.cloud/v1.0/watermark/replace" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -d "{\"FileInfo\":{\"FilePath\":\"with_watermarks/sample.pdf\"},\"ReplaceTextOptions\":{\"Text\":\"New watermark text\",\"Size\":0.0},\"ReplaceImageOptions\":{\"Image\":{\"FilePath\":\"images/sample.jpg\"}},\"TextSearchCriteria\":{\"SearchText\":\"Watermark text\"},\"ImageSearchCriteria\":{\"ImageFileInfo\":{\"FilePath\":\"watermark_images/sample_watermark.png\"}}}"
 ```
 
 {{< /tab >}}

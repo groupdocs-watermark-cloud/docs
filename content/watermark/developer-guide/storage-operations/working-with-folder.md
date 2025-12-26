@@ -26,14 +26,28 @@ This API allows you to get a list of all files of a specific folder from the spe
 ### cURL example
 
 {{< tabs "example1">}}
-{{< tab "Request" >}}
-
+{{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/watermarkdocs?storageName#MyStorage" \
--H  "accept: application/json" \
--H  "authorization: Bearer [Access Token]"
+curl -X GET 'https://api.groupdocs.cloud/v1.0/watermark/storage/folder/watermarkdocs?storageName#MyStorage' \
+-H 'accept: application/json' \
+-H "authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+curl.exe -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/watermarkdocs?storageName#MyStorage" `
+-H "accept: application/json" `
+-H "authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+curl -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/watermarkdocs?storageName#MyStorage" ^
+-H "accept: application/json" ^
+-H "authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}}
 {{< tab "Response" >}}
 
@@ -134,14 +148,28 @@ This API allows you to create a new folder in the specified Cloud Storage. If yo
 ### cURL example
 
 {{< tabs "example3">}}
-{{< tab "Request" >}}
-
+{{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v1.0/watermark/folder/watermarkdocs?storageName#MyStorage" \
--H  "accept: application/json" \
--H  "authorization: Bearer [Access Token]"
+curl -X POST 'https://api.groupdocs.cloud/v1.0/watermark/folder/watermarkdocs?storageName#MyStorage' \
+-H 'accept: application/json' \
+-H "authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+curl.exe -X POST "https://api.groupdocs.cloud/v1.0/watermark/folder/watermarkdocs?storageName#MyStorage" `
+-H "accept: application/json" `
+-H "authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+curl -X POST "https://api.groupdocs.cloud/v1.0/watermark/folder/watermarkdocs?storageName#MyStorage" ^
+-H "accept: application/json" ^
+-H "authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}}
 {{< tab "Response" >}}
 
@@ -188,14 +216,28 @@ This API allows you to delete a particular folder in the specified Cloud Storage
 ### cURL example
 
 {{< tabs "example5">}}
-{{< tab "Request" >}}
-
+{{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X DELETE "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/parserdocs?storageName#MyStorage&#x26;recursive#true" \
--H  "accept: application/json" \
--H  "authorization: Bearer [Access Token]"
+curl -X DELETE 'https://api.groupdocs.cloud/v1.0/watermark/storage/folder/parserdocs?storageName#MyStorage&recursive=true' \
+-H 'accept: application/json' \
+-H "authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+curl.exe -X DELETE "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/parserdocs?storageName#MyStorage&recursive=true" `
+-H "accept: application/json" `
+-H "authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+curl -X DELETE "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/parserdocs?storageName#MyStorage&recursive=true" ^
+-H "accept: application/json" ^
+-H "authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}}
 {{< tab "Response" >}}
 
@@ -242,14 +284,28 @@ This API allows you to copy a folder to another location in the GroupDocs Cloud 
 ### cURL example
 
 {{< tabs "example7">}}
-{{< tab "Request" >}}
-
+{{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X PUT "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/copy/watermarkdocs?destPath#viewerdocs1&#x26;srcStorageName#MyStorage&#x26;destStorageName#MyStorage" \
--H  "accept: application/json" \
--H  "authorization: Bearer [Access Token]"
+curl -X PUT 'https://api.groupdocs.cloud/v1.0/watermark/storage/folder/copy/watermarkdocs?destPath#viewerdocs1&srcStorageName#MyStorage&destStorageName#MyStorage' \
+-H 'accept: application/json' \
+-H "authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+curl.exe -X PUT "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/copy/watermarkdocs?destPath#viewerdocs1&srcStorageName#MyStorage&destStorageName#MyStorage" `
+-H "accept: application/json" `
+-H "authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+curl -X PUT "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/copy/watermarkdocs?destPath#viewerdocs1&srcStorageName#MyStorage&destStorageName#MyStorage" ^
+-H "accept: application/json" ^
+-H "authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}}
 {{< tab "Response" >}}
 
@@ -298,14 +354,28 @@ This API allows you to move a folder to another location in the GroupDocs Cloud 
 ### cURL example
 
 {{< tabs "example9">}}
-{{< tab "Request" >}}
-
+{{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X PUT "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/move/watermarkdocs?destPath#viewerdocs1&#x26;srcStorageName#MyStorage&#x26;destStorageName#MyStorage" \
--H  "accept: application/json" \
--H  "authorization: Bearer [Access Token]"  
+curl -X PUT 'https://api.groupdocs.cloud/v1.0/watermark/storage/folder/move/watermarkdocs?destPath#viewerdocs1&srcStorageName#MyStorage&destStorageName#MyStorage' \
+-H 'accept: application/json' \
+-H "authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+curl.exe -X PUT "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/move/watermarkdocs?destPath#viewerdocs1&srcStorageName#MyStorage&destStorageName#MyStorage" `
+-H "accept: application/json" `
+-H "authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+curl -X PUT "https://api.groupdocs.cloud/v1.0/watermark/storage/folder/move/watermarkdocs?destPath#viewerdocs1&srcStorageName#MyStorage&destStorageName#MyStorage" ^
+-H "accept: application/json" ^
+-H "authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}}
 {{< tab "Response" >}}
 

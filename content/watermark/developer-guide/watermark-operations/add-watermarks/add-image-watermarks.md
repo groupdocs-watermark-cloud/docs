@@ -23,41 +23,100 @@ The following example demonstrates how to add watermark to the document. Here y
 ## cURL example
 
 {{< tabs "example1">}}
-{{< tab "Request" >}}
+{{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-# First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
-# Kindly place Client Id in "client_id" and Client Secret in "client_secret" argument.
+# Get JSON Web Token
+# Place your Client Id and Client Secret in the environment variables CLIENT_ID and CLIENT_SECRET.
 curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
-   
-# cURL example to join several documents into one
+  -X POST \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json"
+
+# cURL example to add a watermark to a document
 curl -v "https://api.groupdocs.cloud/v1.0/watermark" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>" \
--d "{
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
     "FileInfo": {
-        "FilePath": "documents\\sample.pdf",
+        "FilePath": "documents/sample.pdf",
         "StorageName": ""
     },
     "WatermarkDetails": [
         {
             "ImageWatermarkOptions": {
                 "Image": {
-                    "FilePath": "watermark_images\\sample_watermark.png",
+                    "FilePath": "watermark_images/sample_watermark.png",
                     "StorageName": ""
                 }
             }
         }
     ],
     "ProtectLevel": 2
+}'
+```
+
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+# Get JSON Web Token
+# Ensure CLIENT_ID and CLIENT_SECRET are set in the environment.
+curl.exe -v "https://api.groupdocs.cloud/connect/token" `
+  -X POST `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json"
+
+# cURL example to add a watermark to a document
+curl.exe -v "https://api.groupdocs.cloud/v1.0/watermark" `
+  -X POST `
+  -H "Content-Type: application/json" `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -d "{
+    'FileInfo': {
+        'FilePath': 'documents\\sample.pdf',
+        'StorageName': ''
+    },
+    'WatermarkDetails': [
+        {
+            'ImageWatermarkOptions': {
+                'Image': {
+                    'FilePath': 'watermark_images\\sample_watermark.png',
+                    'StorageName': ''
+                }
+            }
+        }
+    ],
+    'ProtectLevel': 2
 }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+REM Get JSON Web Token
+REM Ensure CLIENT_ID and CLIENT_SECRET are defined in the environment.
+curl -v "https://api.groupdocs.cloud/connect/token" ^
+  -X POST ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
+
+REM cURL example to add a watermark to a document
+curl -v "https://api.groupdocs.cloud/v1.0/watermark" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -d "{\"FileInfo\":{\"FilePath\":\"documents\\\\sample.pdf\",\"StorageName\":\"\"},\"WatermarkDetails\":[{\"ImageWatermarkOptions\":{\"Image\":{\"FilePath\":\"watermark_images\\\\sample_watermark.png\",\"StorageName\":\"\"}}}],\"ProtectLevel\":2}"
 ```
 
 {{< /tab >}}

@@ -25,14 +25,28 @@ This API intended for checking the existence of cloud storage with a given name 
 ### cURL example
 
 {{< tabs "example1">}}
-{{< tab "Request" >}}
-
+{{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/MyStorage/exist" \
--H  "accept: application/json" \
--H  "authorization: Bearer  [Access Token]"
+curl -X GET 'https://api.groupdocs.cloud/v1.0/watermark/storage/MyStorage/exist' \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+curl.exe -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/MyStorage/exist" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+curl -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/MyStorage/exist" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}}
 {{< tab "Response" >}}
 
@@ -77,14 +91,28 @@ This API intended for checking the existence of a file or folder in [GroupDocs C
 ### cURL example
 
 {{< tabs "example3">}}
-{{< tab "Request" >}}
-
+{{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/exist/watermarkdocs?storageName#MyStorage" \
--H  "accept: application/json" \
--H  "authorization: Bearer [Access Token]"
+curl -X GET 'https://api.groupdocs.cloud/v1.0/watermark/storage/exist/watermarkdocs?storageName#MyStorage' \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+curl.exe -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/exist/watermarkdocs?storageName#MyStorage" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+curl -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/exist/watermarkdocs?storageName#MyStorage" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}}
 {{< tab "Response" >}}
 
@@ -128,14 +156,28 @@ This API intended for getting total and used space of the [GroupDocs Cloud Stora
 ### cURL example
 
 {{< tabs "example5">}}
-{{< tab "Request" >}}
-
+{{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/disc?storageName#MyStorage" \
--H  "accept: application/json" \
--H  "authorization: Bearer [Access Token]"
+curl -X GET 'https://api.groupdocs.cloud/v1.0/watermark/storage/disc?storageName#MyStorage' \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+curl.exe -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/disc?storageName#MyStorage" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+curl -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/disc?storageName#MyStorage" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}}
 {{< tab "Response" >}}
 
@@ -180,14 +222,28 @@ This API intended for getting the list of file versions, stored in the [GroupDoc
 ### cURL example
 
 {{< tabs "example7">}}
-{{< tab "Request" >}}
-
+{{< tab "Linux/MacOS/Bash" >}}
 ```bash
-curl -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/version/one-page.docx?storageName#MyStorage" \
--H  "accept: application/json" \
--H  "authorization: Bearer [Access Token]"
+curl -X GET 'https://api.groupdocs.cloud/v1.0/watermark/storage/version/one-page.docx?storageName#MyStorage' \
+  -H "accept: application/json" \
+  -H "authorization: Bearer $JWT_TOKEN"
 ```
+{{< /tab >}}
 
+{{< tab "Windows PowerShell" >}}
+```powershell
+curl.exe -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/version/one-page.docx?storageName#MyStorage" `
+  -H "accept: application/json" `
+  -H "authorization: Bearer $env:JWT_TOKEN"
+```
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+```cmd
+curl -X GET "https://api.groupdocs.cloud/v1.0/watermark/storage/version/one-page.docx?storageName#MyStorage" ^
+  -H "accept: application/json" ^
+  -H "authorization: Bearer %JWT_TOKEN%"
+```
 {{< /tab >}}
 {{< tab "Response" >}}
 
