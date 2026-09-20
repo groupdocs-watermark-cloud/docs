@@ -104,9 +104,11 @@ This API allows you to upload files to the [GroupDocs Cloud Storage](https://das
 {{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-curl -X POST "https://api.groupdocs.cloud/v1.0/watermark/storage/file/parserdocs%2Fone-page2.docx?storageName#MyStorage" \
-  -H "accept: application/json" \
-  -H "authorization: Bearer $JWT_TOKEN"
+curl -X PUT \
+  "https://api.groupdocs.cloud/v1.0/watermark/storage/file/watermarkdocs/one-page2.docx?storageName=MyStorage" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -H "Accept: application/json" \
+  -F "File=@one-page2.docx"
 ```
 
 {{< /tab >}}
@@ -114,9 +116,11 @@ curl -X POST "https://api.groupdocs.cloud/v1.0/watermark/storage/file/parserdocs
 {{< tab "Windows PowerShell" >}}
 
 ```powershell
-curl.exe -X POST "https://api.groupdocs.cloud/v1.0/watermark/storage/file/parserdocs%2Fone-page2.docx?storageName#MyStorage" `
-  -H "accept: application/json" `
-  -H "authorization: Bearer $env:JWT_TOKEN"
+curl.exe -X PUT `
+  "https://api.groupdocs.cloud/v1.0/watermark/storage/file/watermarkdocs/one-page2.docx?storageName=MyStorage" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -H "Accept: application/json" `
+  -F "File=@one-page2.docx"
 ```
 
 {{< /tab >}}
@@ -124,9 +128,11 @@ curl.exe -X POST "https://api.groupdocs.cloud/v1.0/watermark/storage/file/parser
 {{< tab "Windows CMD" >}}
 
 ```cmd
-curl -X POST "https://api.groupdocs.cloud/v1.0/watermark/storage/file/parserdocs%2Fone-page2.docx?storageName#MyStorage" ^
-  -H "accept: application/json" ^
-  -H "authorization: Bearer %JWT_TOKEN%"
+curl -X PUT ^
+  "https://api.groupdocs.cloud/v1.0/watermark/storage/file/watermarkdocs/one-page2.docx?storageName=MyStorage" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -H "Accept: application/json" ^
+  -F "File=@one-page2.docx"
 ```
 
 {{< /tab >}}
