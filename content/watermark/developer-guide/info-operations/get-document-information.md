@@ -15,7 +15,9 @@ Here is the list of properties that can be obtained for a document:
 * Document file extension;
 * Document size in bytes;
 * Document file format;
-* Document page count.
+* Document page count;
+* Whether the document is encrypted and requires a password to open;
+* Descriptions of the document pages.
 
 The table below contains the full list of properties.
 

@@ -73,6 +73,8 @@ The table below contains the full list of properties that can be specified when 
 |Position.ConsiderParentMargins|Indicates whether the watermark size and coordinates are calculated considering parent margins|
 |Position.IsBackground|Indicates whether the watermark should be placed at the background.|
 |Opacity|The opacity of the watermark|
+|TileOptions|The tile options|When set, the watermark is repeated across the whole page
+|PagesSetup|The pages the watermark should be added to|
 
 ## PdfOptions
 
@@ -81,6 +83,7 @@ The table below contains the full list of properties that can be specified when 
 |PrintOnlyAnnotationWatermarks|Indicates whether annotation watermarks should be added and should be visible only while printing|
 |Rasterize|Indicates whether the document should be rasterized.|Converts all content pages into images.
 |RasterizeImageFormat|PDF image conversion format|Possible values: Jpeg, Png, Gif
+|RasterizeResolution|The resolution of rasterized pages in DPI|Value from 1 to 600. The default value is 150.
 |Pages|Pages to add watermarks to|
 
 ## ImageOptions

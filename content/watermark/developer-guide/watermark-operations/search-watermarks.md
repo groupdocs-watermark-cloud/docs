@@ -24,11 +24,16 @@ The table below contains the full list of properties.
 |SaveFoundImages|Indicates whether found images should be saved.|
 |TextSearchCriteria|Search criteria allowing filtering by watermark text|
 |TextSearchCriteria.SearchText|The exact string to search for|
+|TextSearchCriteria.MatchCase|Indicates whether the search is case-sensitive.|The default value is true
+|TextSearchCriteria.UseRegularExpression|Indicates whether SearchText is a .NET regular expression.|The default value is false
+|TextSearchCriteria.SkipUnreadableCharacters|Indicates whether unreadable characters are skipped when comparing text.|The default value is false
+|TextSearchCriteria.Pages|The page numbers to search on, starting from 1.|When empty, all pages are searched
 |ImageSearchCriteria|Search criteria for finding images|
 |ImageSearchCriteria.ImageFileInfo|Image to search for.|
 |ImageFileInfo.FilePath|The path of the image, located in the storage|Required
 |ImageFileInfo.StorageName|Storage name|
 |ImageFileInfo.Password|The password to open image|
+|ImageSearchCriteria.Pages|The page numbers to search on, starting from 1.|When empty, all pages are searched
 |SizeSearchCriteria|Search criteria allowing filtering by watermark size|
 |SizeSearchCriteria.Dimension|The dimension of the watermark to search by|Possible values: Height, Width
 |SizeSearchCriteria.Maximum|Dimension ending value|

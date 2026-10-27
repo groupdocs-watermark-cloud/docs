@@ -38,11 +38,16 @@ The table below contains the full list of properties.
 |OutputFolder|The folder for the resultant file|"watermark/removed_watermark" is default
 |TextSearchCriteria|Search criteria allowing filtering by watermark text|
 |TextSearchCriteria.SearchText|The exact string to search for|
+|TextSearchCriteria.MatchCase|Indicates whether the search is case-sensitive.|The default value is true
+|TextSearchCriteria.UseRegularExpression|Indicates whether SearchText is a .NET regular expression.|The default value is false
+|TextSearchCriteria.SkipUnreadableCharacters|Indicates whether unreadable characters are skipped when comparing text.|The default value is false
+|TextSearchCriteria.Pages|The page numbers to search on, starting from 1.|When empty, all pages are searched
 |ImageSearchCriteria|Search criteria for finding images|
 |ImageSearchCriteria.ImageFileInfo|Image to search for.|
 |ImageFileInfo.FilePath|The path of the image, located in the storage|Required
 |ImageFileInfo.StorageName|Storage name|
 |ImageFileInfo.Password|The password to open image|
+|ImageSearchCriteria.Pages|The page numbers to search on, starting from 1.|When empty, all pages are searched
 |SizeSearchCriteria|Search criteria allowing filtering by watermark size|
 |SizeSearchCriteria.Dimension|The dimension of a watermark to search by|Possible values: Height, Width
 |SizeSearchCriteria.Maximum|Dimension ending value|
@@ -60,6 +65,14 @@ The table below contains the full list of properties.
 |TextFormattingSearchCriteria.FontUnderline|Indicating whether the font used in watermark text formatting is underline.|
 |TextFormattingSearchCriteria.FontStrikeout|Indicating whether the font used in watermark text formatting is a strikeout.|
 |TextFormattingSearchCriteria.FontItalic|Indicating whether the font used in watermark text formatting is italic.|
+|ObjectsToSearch|The document objects to search in.|The same value must be passed to Search and Remove operations so that RemoveIds match
+|ObjectsToSearch.WordProcessingObjects|The word processing searchable objects.|Possible values: All, Hyperlinks, Text, Shapes, None
+|ObjectsToSearch.SpreadsheetObjects|The spreadsheet searchable objects.|Possible values: All, AttachedImages, Hyperlinks, Cells, WorksheetBackgrounds, HeadersFooters, ChartsBackgrounds, Shapes, None
+|ObjectsToSearch.PresentationObjects|The presentation searchable objects.|Possible values: All, Hyperlinks, SlidesBackgrounds, ChartsBackgrounds, Shapes, None
+|ObjectsToSearch.DiagramObjects|The diagram searchable objects.|Possible values: All, Hyperlinks, HeadersFooters, Comments, Shapes, None
+|ObjectsToSearch.PdfObjects|The pdf searchable objects.|Possible values: All, AttachedImages, Hyperlinks, Text, Annotations, Artifacts, XObjects, None
+|ObjectsToSearch.EmailObjects|The email searchable objects.|Possible values: All, EmbeddedImages, AttachedImages, HtmlBody, PlainTextBody, Subject, None
+|ImageInpaintingOptions|The image inpainting options.|Use it to remove a watermark from a raster image by specifying its region.
 |RemoveIds|Collection of possible watermarks IDs to remove.|The array contains IDs returned by Search operation.
 
 In case the array is not passed, all the found possible watermarks are removed.
